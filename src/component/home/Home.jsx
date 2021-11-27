@@ -1,9 +1,9 @@
 import React from 'react';
 import { ButtonOrderNow } from '../buttonOrderNow/ButtonOrderNow';
+import { Heading } from '../heading/Heading';
 import { Container, Content, Imagem } from '../home/homeStyle';
 
 export const Home = () =>{
-
 
     return(
         <Container>
