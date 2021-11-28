@@ -3,6 +3,32 @@ import { Container, Logo, MenuBar, NavBar } from './headerStyle';
 
 export const Header = () =>{
 
+    const menu = [
+        {
+            href: "#home",
+            value: "home"
+        },
+        {
+            href: "#speciality",
+            value: "speciality"
+        },
+        {
+            href: "#popular",
+            value: "popular"
+        },
+        {
+            href: "#gallery",
+            value: "gallery"
+        },
+        {
+            href: "#review",
+            value: "review"
+        },
+        {
+            href: "#order",
+            value: "order"
+        },
+    ]
 
     return(
         <Container>
@@ -12,12 +38,9 @@ export const Header = () =>{
             <MenuBar><i className="fas fa-bars"></i></MenuBar>
 
             <NavBar>
-                <a href="#home">home</a>
-                <a href="#speciality">speciality</a>
-                <a href="#popular">popular</a>
-                <a href="#gallery">gallery</a>
-                <a href="#review">review</a>
-                <a href="#order">order</a>
+                {menu.map(item =>(
+                    <a key={item.href} href={item.href}>{item.value}</a>
+                ))}
             </NavBar>
         </Container>
     )

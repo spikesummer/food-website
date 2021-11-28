@@ -12,6 +12,11 @@ export const Container = styled.div`
     background:#fff;
     padding:2rem 9%;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+    @media(max-width:991px){
+        padding:2rem;
+    }
+
 `;
 
 export const Logo = styled.a`
@@ -33,6 +38,10 @@ export const MenuBar = styled.div`
     border-radius: .3rem;
     padding:.5rem 1.5rem;
     display: none;
+
+    @media(max-width:768px){
+        display: initial;
+    }
 `;
 
 export const NavBar = styled.nav`
@@ -45,5 +54,26 @@ export const NavBar = styled.nav`
 
     a:hover{
         color:${red};
+    }
+
+    @media(max-width:768px){
+        position: absolute;
+        top:100%; left: 0; right:0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        .active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        a{
+            margin: 1.5rem;
+            padding:1.5rem;
+            display: block;
+            border:.2rem solid rgba(0,0,0,.1);
+            border-left:.5rem solid var(--red);
+            background:#fff;
+        }
     }
 `;

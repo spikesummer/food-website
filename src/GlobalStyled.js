@@ -13,11 +13,11 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         text-transform: capitalize;
         transition: all .2s linear;
-    }
 
-    ::selection{
-        background:${red};
-        color:#fff;
+        ::selection{
+            background:${red};
+            color:#fff;
+        }
     }
 
     html{
@@ -25,28 +25,18 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
+
+        @media(max-width:991px){
+            font-size: 55%;
+        }
+
+        @media(max-width:450px){
+            font-size: 50%;
+        }
     }
 
     body{
         background:#f7f7f7;
     }
 
-    section{
-        padding: 2rem 9%;
-    }
-    
-    @media(max-width:991px){
-
-        html{
-        font-size: 55%;
-        }
-        
-        header{
-            padding:2rem;
-        }
-
-        section{
-            padding:2rem;
-        }
-    }
-`
+`;
