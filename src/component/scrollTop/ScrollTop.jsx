@@ -6,7 +6,7 @@ const red = "#ff3838";
 const ScrollLink = styled.a`
    
         position: fixed;
-        top:-10%;
+        top:-120%;
         right:2rem;
         padding:.5rem 1.5rem;
         font-size: 4rem;
@@ -22,10 +22,9 @@ const ScrollLink = styled.a`
       
 `;
 
-
 export const ScrollTop = (props) => {
  
     return(
-        <ScrollLink href="#" className={`${props.active} fas fa-angle-up`} id="home"/>
+        <ScrollLink href="#" className={`${props.active} fas fa-angle-up`} />
     )
 }

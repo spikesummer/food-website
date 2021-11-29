@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { GlobalStyle } from '../GlobalStyled';
 import { Header } from '../component/header/Header';
 import { Home } from '../component/home/Home';
@@ -16,12 +16,11 @@ export const App = () => {
   const [mudaActive, setMudaActive] = useState("");
   const [loadOut, setloadOut] = useState("");
 
-  useEffect(()=>{
-    window.onload = () => fadeOut();
-    window.onscroll = () => {
-        window.scrollY > 60?setMudaActive("active"):setMudaActive("")}
-  }, [])
-
+  window.onload = () => fadeOut();
+  window.onscroll = () => {
+    window.scrollY > 60?setMudaActive("active"):setMudaActive("")
+  }
+ 
   function fadeOut(){
     setInterval(()=>setloadOut("fade-out"), 3000);
   }
