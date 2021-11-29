@@ -6,7 +6,7 @@ import { MainSection } from '../mainSection/MainSection';
 export const Home = () =>{
 
     return(
-        <MainSection>
+        <MainSection id="home">
             <Container>
                 <Content>
                     <h3>food made with love</h3>

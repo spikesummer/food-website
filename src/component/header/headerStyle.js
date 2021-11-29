@@ -63,7 +63,7 @@ export const NavBar = styled.nav`
         border-top: .1rem solid rgba(0,0,0,.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
-        .active{
+        &.active{
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
 
@@ -72,7 +72,7 @@ export const NavBar = styled.nav`
             padding:1.5rem;
             display: block;
             border:.2rem solid rgba(0,0,0,.1);
-            border-left:.5rem solid var(--red);
+            border-left:.5rem solid ${red};
             background:#fff;
         }
     }

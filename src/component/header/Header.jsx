@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Logo, MenuBar, NavBar } from './headerStyle';
 
-export const Header = () =>{
+export const Header = (props) =>{
+    const [activeMenu, setActiveMenu] = useState("fa-bars");
+    const [activeNavBar, setActiveNavBar] = useState("");
 
     const menu = [
         {
@@ -30,16 +32,23 @@ export const Header = () =>{
         },
     ]
 
+    window.onscroll = () =>{if(activeMenu !== "fa-bars") troca()}
+
+    function troca( ){
+        activeMenu === "fa-bars"?setActiveMenu("fa-times"):setActiveMenu("fa-bars");
+        activeMenu === "fa-bars"?setActiveNavBar("active"):setActiveNavBar("");
+    }
+    
     return(
         <Container>
             
-            <Logo><i className="fas fa-utensils"></i>food</Logo>
+            <Logo ><i className="fas fa-utensils"></i>food</Logo>
 
-            <MenuBar><i className="fas fa-bars"></i></MenuBar>
+            <MenuBar onClick={troca}><i className={`fas ${activeMenu}`}></i></MenuBar>
 
-            <NavBar>
-                {menu.map(item =>(
-                    <a key={item.href} href={item.href}>{item.value}</a>
+            <NavBar className={activeNavBar}>
+                {menu.map((item, index) =>(
+                    <a key={index} href={item.href}>{item.value}</a>
                 ))}
             </NavBar>
         </Container>

@@ -20,7 +20,7 @@ export const Popular = () =>{
 
     const products = [
         {
-            name: "tasty burguer",
+            name: "tasty burger",
             price: "$5 - $20",
             img: "img/p-1.jpg",
             stars: ["fas fa-star", "fas fa-star", "fas fa-star", "fas fa-star", "far fa-star"]
@@ -58,7 +58,7 @@ export const Popular = () =>{
     ]
 
     return(
-        <MainSection>
+        <MainSection id="popular">
             <Heading textBefore="most" span="popular" textAfter="foods"/>
             <BoxContainer>
                 {products.map(product =>{
